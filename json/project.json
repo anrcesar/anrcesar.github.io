@@ -1,0 +1,58 @@
+[
+  {
+    "section": "header",
+    "template": "<img src=\"{src}\" alt=\"{alt}\" class=\"img-thumbnail img-responsive d-block mx-auto\">",
+    "data": {
+      "src": "imgs/logo_cesar.png",
+      "alt": "Logo of the CESAR project"
+    }
+  },
+  {
+    "section": "footer",
+    "template": "<div class=\"row\">{logos}</div>",
+    "data": {
+      "logos": {
+        "template": "<div class=\"col-md-4\"><a href=\"{link}\"><img src=\"{src}\" alt=\"{alt}\" class=\"img-thumbnail img-responsive d-block mx-auto\"></a></div>",
+        "data": {
+          "src": [
+            "imgs/logo_anr.png",
+            "imgs/logo_pm.png",
+            "imgs/logo_ir.png"
+          ],
+          "alt": [
+            "Logo of the ANR",
+            "Logo of the Pôle Mer Bretagne Atlantique",
+            "Logo of Images et Réseaux"
+          ],
+          "link": [
+            "https://anr.fr",
+            "https://www.pole-mer-bretagne-atlantique.com",
+            "https://www.images-et-reseaux.com"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "section": "project_description",
+    "template": "{text1}<br><br>{text2}<ul>{objectives}</ul><figure class=\"figure d-block mx-auto\"><img src=\"{src}\" alt=\"{alt}\" class=\"figure-img img-fluid rounded\"><figcaption class=\"figure-caption\">{caption}</figcaption></figure>",
+    "data": {
+      "text1": "This project falls within the scope of exploring complex environments through the fusion of multimodal data to support decision-making and improve knowledge. More specifically, the project focuses on the underwater environment and aims to equip underwater drones with embedded intelligence for observing and analyzing underwater scenes that is invariant across spatio-temporal scales, by exploiting multimodal data (optical and scalar).<br><br>In this project, we start from the premise that our knowledge of the underwater environment is limited and lacks precision. This deficiency in human knowledge of the underwater environment does not allow for industrial exploitation or effective monitoring of the marine ecosystem. Indeed, a drone must maintain high decision-making performance despite changes in deployment area, testing season, and operational conditions. These performances are closely linked to those of the semantic segmentation algorithms on which the drone relies to operate.<br><br>However, experiments conducted by the Vision-AD team show that semantic segmentation performance on underwater images depends on the location and time of observation. This spatio-temporal dependency constitutes a major obstacle that must be overcome to facilitate drone missions. The main hypothesis underlying this project is that by incorporating environmental data directly into the semantic image segmentation algorithm, a link is created between the environment and image quality, which can subsequently be exploited by the decision-making algorithm.<br><br>The observation system to be designed enables semantic segmentation of underwater scenes based on the fusion of heterogeneous data sources embedded on an underwater drone. A review of the recent state of the art in machine learning algorithms that could be used in this project allowed us to identify promising methods such as contrastive learning to improve representation learning, curriculum learning to enable the gradual integration of environmental data, and the adaptation of adaptive neural network architectures to transformers in order to control decision-making according to image complexity and the impact of environmental data.<br><br>The CESAR project targets use cases in which drone reactivity is essential. These include not only security applications for detecting unknown objects, but also autonomous navigation, inspection, and real-time positioning applications. For these use cases, fast onboard decision-making offers several advantages. However, it raises the challenge of embedding computationally intensive AI algorithms on resource-constrained platforms. We aim to mitigate these constraints by applying algorithm-architecture co-design, and more specifically through knowledge distillation, which has not yet been explored in the underwater domain.",
+      "text2": "Thus, the four objectives of the project are:",
+      "src": "imgs/wp_diagram.png",
+      "alt": "Work Packages Diagram",
+      "caption": "Interaction between the work-packages of the CESAR project.",
+      "objectives": {
+        "template": "<li>{objective}</li>",
+        "data": {
+          "objective": [
+            "Identify the underwater environmental parameters that influence image quality;",
+            "Enrich the mathematical modeling of AI algorithms through the fusion of heterogeneous data, drawing inspiration from innovative techniques such as contrastive learning, curriculum learning, and by adapting adaptive neural network architectures to transformers;",
+            "Accelerate the scene interpretation process through the application of knowledge distillation techniques;",
+            "Explore the design space of reconfigurable architectures for implementing high-performance computations directly onboard the drone (close to the data source)."
+          ]
+        }
+      }
+    }
+  }
+]

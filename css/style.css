@@ -1,0 +1,156 @@
+/**
+ * \\Author: Thibault Napoléon "Imothep"
+ * \\Company: ISEN Ouest
+ * \\Email: thibault.napoleon@isen-ouest.yncrea.fr
+ * \\Created Date: 16-Oct-2024 - 12:33:51
+ * \\Last Modified: 23-Dec-2025 - 15:54:04
+ */
+
+@media (min-width: 1400px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1300px;
+  }
+}
+
+body {
+  background-color: light-dark(#ffffff, #121212);
+  color: light-dark(#000000, #ffffff);
+  font-family: 'Roboto', monospace;
+  font-size: 1.1rem;
+  font-weight: 300;
+  text-align: justify;
+  --color1: light-dark(#2f4279, #2f4279);
+  --color2: light-dark(#437ebd, #437ebd);
+  --rule-size: 1.5px;
+  --rule-size-double: 3px;
+}
+
+.color2 {
+  color: var(--color2);
+}
+
+.navbar-nav {
+  --bs-nav-link-padding-y: 0;
+}
+
+.navbar-nav .nav-link {
+  color: var(--color1);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.navbar-nav .nav-link.active{
+  color: #437ebd;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--color2);
+  text-decoration: none;
+}
+
+.navbar-collapse {
+  text-align: right;
+}
+
+.color-scheme {
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+header {
+  padding-top: 0.5rem;
+  background-color: light-dark(#ffffff, #121212);
+}
+
+footer {
+  padding-bottom: 0.5rem;
+}
+
+section {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+section:before {
+  height: 5.6rem;
+  margin-top: -5.6rem;
+  display: block;
+  content: '';
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-top: var(--rule-size-double) solid var(--color2);
+  border-bottom: var(--rule-size-double) solid var(--color2);
+}
+
+h2 {
+  border-left: 6px solid var(--color2);
+  font-size: 1.35rem;
+  font-weight: 600;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  padding-left: 0.5rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+a {
+  color: var(--color2);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color1);
+  text-decoration: underline;
+}
+
+.ai, .bi {
+  font-style: normal;
+}
+
+.ai:hover, .bi:hover {
+  color: var(--color2);
+}
+
+.img-thumbnail {
+  background-color: light-dark(#ffffff, #121212);
+  border-color: light-dark(#ffffff, #121212);
+}
+
+.figure {
+  max-width: 80%;
+}
+
+.figure-caption {
+  font-style: italic;
+  color: light-dark(#4a4a4a, #ffffff);
+}
+
+.social-media .ai, .social-media .bi {
+  font-size: 2.5rem;
+  margin-left: 1.5rem;
+}
+
+.zoom {
+  font-size: 1.2rem;
+}
+
+.horizontal-rule {
+  border-top: var(--rule-size) solid var(--color1);
+}

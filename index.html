@@ -1,0 +1,127 @@
+<!--
+\\Author: Thibault Napoléon "Imothep"
+\\Company: ISEN Ouest
+\\Email: thibault.napoleon@isen-ouest.yncrea.fr
+\\Created Date: 17-Dec-2025 - 19:55:24
+\\Last Modified: 23-Dec-2025 - 15:56:18
+-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="CESAR - ANR project">
+    <meta name="description" content="Website of CESAR ANR project">
+    <meta name="keywords" content="ANR CESAR, vision-ad, isen ouest, labisen">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="imgs/favicon.ico">
+    
+    <!-- CSS Style -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Font -->
+    <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/academicons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- JS Script -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/load_json.js" defer></script>
+
+    <!-- Title -->
+    <title>CESAR - ANR Project</title>
+
+    <!-- Options -->
+    <base target="_blank">
+  </head>
+  <body class="container">
+    <!-- Header -->
+    <header class="sticky-top">
+      <div class="row">
+        <div id="header"></div>
+      </div>
+      <div class="row">
+        <nav id="navbar" class="navbar navbar-expand-lg">
+          <button class="navbar-toggler ms-auto me-2" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse me-2" id="menu">
+            <ul class="navbar-nav w-100">
+              <li class="nav-item">
+                <a class="nav-link" target="_self" href="#project"><i class="bi bi-house-fill"> Project</i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" target="_self" href="#team_experts">Team and experts</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" target="_self" href="#publications_disseminations">Publications and Disseminations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" target="_self" href="#events">Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" target="_self" href="#contact">Contact</a>
+              </li>
+              <li class="nav-item ms-auto">
+                <a id="color-scheme" class="nav-link float-end" target="_self" onclick="switchColorScheme()"></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="horizontal-rule mb-3"></div>
+    </header>
+
+    <!-- Project -->
+    <section id="project">
+      <div class="row">
+        <h1>The project</h1>
+        <div class="col-md-12" id="project_description"></div>
+      </div>
+    </section>
+
+    <!-- Team and experts -->
+    <section id="team_experts">
+      <div class="row">
+        <h1>Team and experts</h1>
+        <div class="col-md-12" id="team"></div>
+        <div class="col-md-12" id="experts"></div>
+      </div>
+    </section>
+
+    <!-- Publications and Disseminations -->
+    <section id="publications_disseminations">
+      <div class="row">
+        <h1>Publications and Disseminations</h1>
+        <div class="col-md-12" id="journals"></div>
+        <div class="col-md-12" id="conferences"></div>
+        <div class="col-md-12" id="disseminations"></div>
+      </div>
+    </section>
+
+    <!-- Events -->
+    <section id="events">
+      <div class="row">
+        <h1>Events</h1>
+        <div class="col-md-12" id="events_description"></div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="row">
+        <h1>Contact</h1>
+        <div class="col-md-12" id="emails"></div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="horizontal-rule mb-3"></div>
+      <div id="footer"></div>
+    </footer>
+  </body>
+</html>

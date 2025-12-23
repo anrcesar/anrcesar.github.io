@@ -1,0 +1,75 @@
+[
+  {
+    "section": "journals",
+    "template": "<h2>{title}</h2>Coming soon<ol reversed>{journals}</ol>",
+    "data": {
+      "title": "Journals",
+      "journals": {
+        "template": "<li>{authors}, <b>{title}</b>. {reference}. <a href=\"https://hal.science/{hal}\" class=\"badge badge text-bg-secondary\">hal</a> <a href=\"data:application/octet-stream,{bibtex}\" class=\"badge badge text-bg-secondary\" download=\"{id}.bib\">bibtex</a> <a href=\"{code}\" class=\"badge badge text-bg-secondary {codevisible}\">code</a></li>",
+        "data": {
+          "id": [],
+          "authors": [],
+          "title": [],
+          "reference": [],
+          "hal": [],
+          "bibtex": [],
+          "code": [],
+          "codevisible": []
+        }
+      }
+    }
+  },
+  {
+    "section": "conferences",
+    "template": "<h2>{title}</h2>Coming soon<ol reversed>{conferences}</ol>",
+    "data": {
+      "title": "Conferences",
+      "conferences": {
+        "template": "<li>{authors}, <b>{title}</b>. {reference}. <a href=\"https://hal.science/{hal}\" class=\"badge badge text-bg-secondary\">hal</a> <a href=\"data:application/octet-stream,{bibtex}\" class=\"badge badge text-bg-secondary\" download=\"{id}.bib\">bibtex</a> <a href=\"{code}\" class=\"badge badge text-bg-secondary {codevisible}\">code</a></li>",
+        "data": {
+          "id": [],
+          "authors": [],
+          "title": [],
+          "reference": [],
+          "hal": [],
+          "bibtex": [],
+          "code": [],
+          "codevisible": []
+        }
+      }
+    }
+  },
+  {
+    "section": "disseminations",
+    "template": "<h2>{title}</h2>{disseminations}",
+    "data": {
+      "title": "Other disseminations",
+      "disseminations": {
+        "template": "<div class=\"row\"><div class=\"col-md-2\"><img src=\"{picture}\" alt=\"{picture_desc}\" class=\"img-thumbnail img-responsive d-block mx-auto\"></div><div class=\"col-md-10\"><b><span class=\"color2\"><a href=\"{link}\">{name}</span></a></b> - <i>{date}</i><br>{researcher}<br>{content}.</div>",
+        "data": {
+          "picture": [
+            "imgs/voice_in_the_blue.png"
+          ],
+          "picture_desc": [
+            "Logo of Voice in the Blue challenge"
+          ],
+          "name": [
+            "Brest Ocean Hackathon - Voice in the Blue"
+          ],
+          "link": [
+            "https://www.campusmer.fr/all-challenges-bre04-voice-in-the-blue-real-time-speech-annotation-of-diver-recorded-underwater-video.-4385-345-0-0.html"
+          ],
+          "date": [
+            "October 2025"
+          ],
+          "researcher": [
+            "Thibault NAPOLÉON and Matthieu SAUMARD."
+          ],
+          "content": [
+            "BRE04 challenge: Real-time speech annotation of diver-recorded underwater video"
+          ]
+        }
+      }
+    }
+  }
+]

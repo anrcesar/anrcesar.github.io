@@ -1,0 +1,26 @@
+[
+  {
+    "section": "emails",
+    "template": "<h2>{title}</h2><ul>{contacts}</ul>",
+    "data": {
+      "title": "For any request about the project, please contact:",
+      "contacts": {
+        "template": "<li><b>{name}:</b> <a href=\"{email-link}\">{email}</a></li>",
+        "data": {
+          "name": [
+            "Maher JRIDI",
+            "Thibault NAPOLÉON"
+          ],
+          "email-link": [
+            "mailto:maher.jridi@isen-ouest.yncrea.fr",
+            "mailto:thibault.napoleon@isen-ouest.yncrea.fr"
+          ],
+          "email": [
+            "maher.jridi@isen-ouest.yncrea.fr",
+            "thibault.napoleon@isen-ouest.yncrea.fr"
+          ]
+        }
+      }
+    }
+  }
+]

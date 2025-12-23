@@ -1,0 +1,26 @@
+[
+  {
+    "section": "events_description",
+    "template": "<h2>{title}</h2><ul>{event}<ul>",
+    "data": {
+      "title": "Meetings",
+      "event": {
+        "template": "<li><b>{name}:</b> {description} - <i>{date}</i>.</li>",
+        "data": {
+          "name": [
+            "Project Kick-off",
+            "First progress meeting"
+          ],
+          "description": [
+            "Meeting with the entire team and subject matter experts. The meeting covered work packages, procurement (research cruises and equipment), project management, deliverables, and communication.",
+            "Meeting with project members and experts. Discussions focused on work package updates, acquisition systems, sensors, research cruises, dissemination, and preliminary scientific results."
+          ],
+          "date": [
+            "April 2, 2025",
+            "November 13, 2025"
+          ]
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,100 @@
+[
+  {
+    "section": "team",
+    "template": "<h2>{title}</h2>{description}<br><br>{persons}<br>",
+    "data": {
+      "title": "Vision-AD Team participants",
+      "description": "This is a single-team project, conducted by the Vision-AD team of LabISEN (ISEN Ouest). The following members are involved in the project:",
+      "persons": {
+        "template": "<div class=\"row\"><div class=\"col-md-2\"><img src=\"{picture}\" alt=\"{picture_desc}\" class=\"img-thumbnail img-responsive d-block mx-auto\"></div><div class=\"col-md-10\"><b>{name}</b><br>{position}<br>{keywords}<br><a href=\"{email-link}\">{email}</a></div></div><br>",
+        "data": {
+          "picture": [
+            "imgs/mjridi.png",
+            "imgs/tnapoleon.png",
+            "imgs/msaumard.png",
+            "imgs/portrait_placeholder.png"
+          ],
+          "picture_desc": [
+            "Picture of Maher JRIDI",
+            "Picture of Thibault NAPOLÉON",
+            "Picture of Matthieu SAUMARD",
+            "Picture of Antonio AL MAKDISSI"
+          ],
+          "name": [
+            "Maher JRIDI",
+            "Thibault NAPOLÉON",
+            "Matthieu SAUMARD",
+            "Antonio AL MAKDISSI"
+          ],
+          "position": [
+            "Professor at ISEN, HDR - Project coordinator - Coordinator of WP1, WP4, and WP5",
+            "Associate Professor at ISEN - Coordinator of WP2, WP3 and WP4",
+            "Associate Professor at ISEN - Will work in WP3",
+            "PhD at ISEN - Work on WP3"
+          ],
+          "keywords": [
+            "Expert in High Performance Embedded Computing (HPEC), underwater images classification, electronics",
+            "Expert in underwater images analysis, GPU prototyping, AI compression",
+            "Expert in applied mathematics on data, multimodal data fusion",
+            "Requested competences on statistics, AI, mathematics"
+          ],
+          "email-link": [
+            "mailto:maher.jridi@isen-ouest.yncrea.fr",
+            "mailto:thibault.napoleon@isen-ouest.yncrea.fr",
+            "mailto:matthieu.saumard@isen-ouest.yncrea.fr",
+            "mailto:antonio.al-makdissi@isen-ouest.yncrea.fr"
+          ],
+          "email": [
+            "maher.jridi@isen-ouest.yncrea.fr",
+            "thibault.napoleon@isen-ouest.yncrea.fr",
+            "matthieu.saumard@isen-ouest.yncrea.fr",
+            "antonio.al-makdissi@isen-ouest.yncrea.fr"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "section": "experts",
+    "template": "<h2>{title}</h2>{description}<br><br>{experts}",
+    "data": {
+      "title": "Experts associated with the project",
+      "description": "Although the project is led by a single team, we are supported by several experts to ensure its successful implementation. This is particularly true for aspects related to biodiversity studies and data acquisition missions. The experts associated with the project are:",
+      "experts": {
+        "template": "<div class=\"row\"><div class=\"col-md-2\"><a href=\"{link}\"><img src=\"{picture}\" alt=\"{picture_desc}\" class=\"img-thumbnail img-responsive d-block mx-auto\"></a></div><div class=\"col-md-10\"><b>{name}</b><br>{position}<br>{keywords}</div></div><br>",
+        "data": {
+          "picture": [
+            "imgs/logo_ifremer.png",
+            "imgs/logo_celadon.png",
+            "imgs/logo_thales.png"
+          ],
+          "picture_desc": [
+            "Logo of Ifremer",
+            "Logo of CELADON",
+            "Logo of Thales"
+          ],
+          "link": [
+            "https://www.ifremer.fr/fr",
+            "https://celadon.blue",
+            "https://www.thalesgroup.com/fr"
+          ],
+          "name": [
+            "Ifremer: Karine OLU (HDR, researcher) - Catherine BORREMANS (Engineer) - Touria BAJOUK (Engineer)",
+            "CELADON: Ivan HOULY",
+            "Thales: Andreas ARNOLD"
+          ],
+          "position": [
+            "Involved in WP2 and WP5",
+            "Involved in WP2 and WP5",
+            "Involved in WP2, WP4 and WP5"
+          ],
+          "keywords": [
+            "Experts on deep seas, benthic habitat study based on imagery, dynamics of coastal ecosystems",
+            "Marine activities",
+            "SONAR and underwater robotics expert"
+          ]
+        }
+      }
+    }
+  }
+]
