@@ -1,0 +1,70 @@
+{
+  "title": "Contact schema",
+  "type": "array",
+  "description": "List of sections",
+  "items": {
+    "type": "object",
+    "description": "Section emails",
+    "required": ["section", "template", "data"],
+    "properties": {
+      "section": {
+        "type": "string",
+        "description": "Section name"
+      },
+      "template": {
+        "type": "string",
+        "description": "HTML template of the section"
+      },
+      "data": {
+        "type": "object",
+        "description": "Section data",
+        "required": ["title", "contacts"],
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "Section title"
+          },
+          "contacts": {
+            "type": "object",
+            "description": "Contacts details",
+            "required": ["template", "data"],
+            "properties": {
+              "template": {
+                "type": "string",
+                "description": "HTML template of a contact"
+              },
+              "data": {
+                "type": "object",
+                "description": "Contact data",
+                "required": ["name", "email-link", "email"],
+                "properties": {
+                  "name": {
+                    "type": "array",
+                    "description": "Contact name",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "email-link": {
+                    "type": "array",
+                    "description": "Contact email link",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "email": {
+                    "type": "array",
+                    "description": "Contact email",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

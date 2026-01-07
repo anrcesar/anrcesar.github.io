@@ -1,0 +1,99 @@
+{
+  "title": "Home schema",
+  "type": "array",
+  "description": "List of sections",
+  "items": {
+    "type": "object",
+    "description": "Section detail",
+    "required": ["section", "template", "data"],
+    "properties": {
+      "section": {
+        "type": "string",
+        "enum": ["header", "footer", "brief_description"],
+        "description": "Section name"
+      },
+      "template": {
+        "type": "string",
+        "description": "HTML template of the section"
+      },
+      "data": {
+        "type": "object",
+        "description": "Section data",
+        "properties": {
+          "src": {
+            "type": "string",
+            "description": "Photo source"
+          },
+          "alt": {
+            "type": "string",
+            "description": "Photo alt description"
+          },
+          "logos": {
+            "type": "object",
+            "description": "Partners logos",
+            "required": [
+              "template",
+              "data"
+            ],
+            "properties": {
+              "template": {
+                "type": "string",
+                "description": "HTML template of a partner logo"
+              },
+              "data": {
+                "type": "object",
+                "description": "Partner logo data",
+                "required": ["src", "alt", "link"],
+                "properties": {
+                  "src": {
+                    "type": "array",
+                    "description": "Partner logo source",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "alt": {
+                    "type": "array",
+                    "description": "Partner logo alt description",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "link": {
+                    "type": "array",
+                    "description": "Partner link",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "text": {
+            "type": "string",
+            "description": "Brief description text"
+          },
+          "caption": {
+            "type": "string",
+            "description": "Photo caption"
+          }
+        }
+      }
+    },
+    "allOf": [
+      {
+        "if": {"properties": {"section": {"const": "header"}}},
+        "then": {"properties": {"data": {"required": ["src", "alt"]}}}
+      },
+      {
+        "if": {"properties": {"section": {"const": "footer"}}},
+        "then": {"properties": {"data": {"required": ["logos"]}}}
+      },
+      {
+        "if": {"properties": {"section": {"const": "brief_description"}}},
+        "then": {"properties": {"data": {"required": ["text", "src", "alt", "caption"]}}}
+      }
+    ]
+  }
+}

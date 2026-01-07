@@ -1,0 +1,181 @@
+{
+  "title": "Team and experts schema",
+  "type": "array",
+  "description": "List of sections",
+  "items": {
+    "type": "object",
+    "description": "Section detail",
+    "required": ["section", "template", "data"],
+    "properties": {
+      "section": {
+        "type": "string",
+        "enum": ["team", "experts"],
+        "description": "Section name"
+      },
+      "template": {
+        "type": "string",
+        "description": "HTML template of the section"
+      },
+      "data": {
+        "type": "object",
+        "description": "Section data",
+        "required": ["title", "description"],
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "Section title"
+          },
+          "description": {
+            "type": "string",
+            "description": "Section description"
+          },
+          "persons": {
+            "type": "object",
+            "description": "Team members",
+            "required": [
+              "template",
+              "data"
+            ],
+            "properties": {
+              "template": {
+                "type": "string",
+                "description": "HTML template of a team member"
+              },
+              "data": {
+                "type": "object",
+                "description": "Team member data",
+                "required": ["picture", "picture_desc", "name", "position",
+                             "keywords", "email-link", "email"],
+                "properties": {
+                  "picture": {
+                    "type": "array",
+                    "description": "Team member picture",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "picture_desc": {
+                    "type": "array",
+                    "description": "Team member picture alt description",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "name": {
+                    "type": "array",
+                    "description": "Team member name",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "position": {
+                    "type": "array",
+                    "description": "Team member position",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "keywords": {
+                    "type": "array",
+                    "description": "Team member keywords",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "email-link": {
+                    "type": "array",
+                    "description": "Team member email link",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "email": {
+                    "type": "array",
+                    "description": "Team member email",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "experts": {
+            "type": "object",
+            "description": "Experts",
+            "required": [
+              "template",
+              "data"
+            ],
+            "properties": {
+              "template": {
+                "type": "string",
+                "description": "HTML template of an expert"
+              },
+              "data": {
+                "type": "object",
+                "description": "Expert data",
+                "required": ["picture", "picture_desc", "link", "name",
+                             "position", "keywords"],
+                "properties": {
+                  "picture": {
+                    "type": "array",
+                    "description": "Expert picture",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "picture_desc": {
+                    "type": "array",
+                    "description": "Expert picture alt description",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "link": {
+                    "type": "array",
+                    "description": "Expert link",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "name": {
+                    "type": "array",
+                    "description": "Expert name",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "position": {
+                    "type": "array",
+                    "description": "Expert position",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "keywords": {
+                    "type": "array",
+                    "description": "Expert keywords",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "allOf": [
+      {
+        "if": {"properties": {"section": {"const": "persons"}}},
+        "then": {"properties": {"data": {"required": ["persons"]}}}
+      },
+      {
+        "if": {"properties": {"section": {"const": "experts"}}},
+        "then": {"properties": {"data": {"required": ["experts"]}}}
+      }
+    ]
+  }
+}

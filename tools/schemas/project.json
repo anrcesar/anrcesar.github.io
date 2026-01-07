@@ -1,0 +1,72 @@
+{
+  "title": "Project schema",
+  "type": "array",
+  "description": "List of sections",
+  "items": {
+    "type": "object",
+    "description": "Section events",
+    "required": ["section", "template", "data"],
+    "properties": {
+      "section": {
+        "type": "string",
+        "description": "Section name"
+      },
+      "template": {
+        "type": "string",
+        "description": "HTML template of the section"
+      },
+      "data": {
+        "type": "object",
+        "description": "Section data",
+        "required": ["text1", "text2", "objectives", "src", "alt", "caption"],
+        "properties": {
+          "text1": {
+            "type": "string",
+            "description": "First description text of the project"
+          },
+          "text2": {
+            "type": "string",
+            "description": "Second description text of the project"
+          },
+          "objectives": {
+            "type": "object",
+            "description": "Objectives details",
+            "required": ["template", "data"],
+            "properties": {
+              "template": {
+                "type": "string",
+                "description": "HTML template of an objective"
+              },
+              "data": {
+                "type": "object",
+                "description": "Objective data",
+                "required": ["objective"],
+                "properties": {
+                  "objective": {
+                    "type": "array",
+                    "description": "Objective",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "src": {
+            "type": "string",
+            "description": "Project diagram source"
+          },
+          "alt": {
+            "type": "string",
+            "description": "Project diagram alt description"
+          },
+          "caption": {
+            "type": "string",
+            "description": "Project diagram caption"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "title": "Events schema",
+  "type": "array",
+  "description": "List of sections",
+  "items": {
+    "type": "object",
+    "description": "Section events",
+    "required": ["section", "template", "data"],
+    "properties": {
+      "section": {
+        "type": "string",
+        "description": "Section name"
+      },
+      "template": {
+        "type": "string",
+        "description": "HTML template of the section"
+      },
+      "data": {
+        "type": "object",
+        "description": "Section data",
+        "required": ["title", "event"],
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "Section title"
+          },
+          "event": {
+            "type": "object",
+            "description": "Events details",
+            "required": ["template", "data"],
+            "properties": {
+              "template": {
+                "type": "string",
+                "description": "HTML template of an event"
+              },
+              "data": {
+                "type": "object",
+                "description": "Event data",
+                "required": ["name", "description", "date"],
+                "properties": {
+                  "name": {
+                    "type": "array",
+                    "description": "Event name",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "description": {
+                    "type": "array",
+                    "description": "Event description",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "date": {
+                    "type": "array",
+                    "description": "Event date",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

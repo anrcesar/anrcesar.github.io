@@ -1,0 +1,135 @@
+{
+  "title": "Publications and disseminations schema",
+  "type": "array",
+  "description": "List of sections",
+  "items": {
+    "type": "object",
+    "description": "Section detail",
+    "required": ["section", "template", "data"],
+    "properties": {
+      "section": {
+        "type": "string",
+        "enum": ["journals", "conferences", "disseminations"],
+        "description": "Section name"
+      },
+      "template": {
+        "type": "string",
+        "description": "HTML template of the section"
+      },
+      "data": {
+        "type": "object",
+        "description": "Section data",
+        "required": ["title"],
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "Section title"
+          },
+          "journals": {
+            "$ref": "#/definitions/publications",
+            "description": "Journals details"
+          },
+          "conferences": {
+            "$ref": "#/definitions/publications",
+            "description": "Conferences details"
+          },
+          "disseminations": {
+            "type": "object",
+            "description": "Disseminations details",
+            "required": ["template", "data"],
+            "properties": {
+              "template": {
+                "type": "string",
+                "description": "HTML template of a disseminations"
+              },
+              "data": {
+                "type": "object",
+                "description": "Dissemination data",
+                "required": ["picture", "picture_desc", "name", "link", "date",
+                             "content", "researcher"],
+                "properties": {
+                  "picture": {
+                    "type": "array",
+                    "description": "Dissemination picture source",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "picture_desc": {
+                    "type": "array",
+                    "description": "Dissemination picture description",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "name": {
+                    "type": "array",
+                    "description": "Dissemination name",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "link": {
+                    "type": "array",
+                    "description": "Dissemination link",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "date": {
+                    "type": "array",
+                    "description": "Dissemination date",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "content": {
+                    "type": "array",
+                    "description": "Dissemination content",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "researcher": {
+                    "type": "array",
+                    "description": "Involved researchers",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "publications": {
+      "type": "object",
+      "required": ["template", "data"],
+      "properties": {
+        "template": {
+          "type": "string",
+          "description": "HTML template of a publication"
+        },
+        "data": {
+          "type": "object",
+          "required": ["id", "authors", "title", "reference", "hal", "bibtex", "code", "codevisible"],
+          "description": "Fields of the HAL publication",
+          "properties": {
+            "id": {"type": "array", "maxContains": 0},
+            "authors": {"type": "array", "maxContains": 0},
+            "title": {"type": "array", "maxContains": 0},
+            "reference": {"type": "array", "maxContains": 0},
+            "hal": {"type": "array", "maxContains": 0},
+            "bibtex": {"type": "array", "maxContains": 0},
+            "code": {"type": "array", "maxContains": 0},
+            "codevisible": {"type": "array", "maxContains": 0}
+          }
+        }
+      }
+    }
+  }
+}
