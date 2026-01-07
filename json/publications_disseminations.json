@@ -45,28 +45,35 @@
     "data": {
       "title": "Other disseminations",
       "disseminations": {
-        "template": "<div class=\"row\"><div class=\"col-md-2\"><img src=\"{picture}\" alt=\"{picture_desc}\" class=\"img-thumbnail img-responsive d-block mx-auto\"></div><div class=\"col-md-10\"><b><span class=\"color2\"><a href=\"{link}\">{name}</span></a></b> - <i>{date}</i><br>{researcher}<br>{content}.</div>",
+        "template": "<div class=\"row mb-4\"><div class=\"col-md-3\"><img src=\"{picture}\" alt=\"{picture_desc}\" class=\"img-thumbnail img-responsive d-block\"></div><div class=\"col-md-9\"><b><span class=\"color2\"><a href=\"{link}\">{name}</span></a></b> - <i>{date}</i><br>{content}.<br><i>{researcher}.</i></div></div>",
         "data": {
           "picture": [
+            "imgs/iabiodiv.png",
             "imgs/voice_in_the_blue.png"
           ],
           "picture_desc": [
+            "IA-Biodiv Challenge picture",
             "Logo of Voice in the Blue challenge"
           ],
           "name": [
+            "IA-Biodiv Challenge",
             "Brest Ocean Hackathon - Voice in the Blue"
           ],
           "link": [
+            "https://anr.fr/actus/details/news/lintelligence-artificielle-au-service-de-la-biodiversite-marine-demarrage-dun-challenge-scientif/",
             "https://www.campusmer.fr/all-challenges-bre04-voice-in-the-blue-real-time-speech-annotation-of-diver-recorded-underwater-video.-4385-345-0-0.html"
           ],
           "date": [
+            "December 2025",
             "October 2025"
           ],
-          "researcher": [
-            "Thibault NAPOLÉON and Matthieu SAUMARD."
-          ],
           "content": [
+            "Presentation of the ANR CESAR project at the IA-Biodiv Challenge closing event",
             "BRE04 challenge: Real-time speech annotation of diver-recorded underwater video"
+          ],
+          "researcher": [
+            "Maher JRIDI and Thibault NAPOLÉON",
+            "Thibault NAPOLÉON and Matthieu SAUMARD"
           ]
         }
       }

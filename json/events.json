@@ -8,16 +8,16 @@
         "template": "<li><b>{name}:</b> {description} - <i>{date}</i>.</li>",
         "data": {
           "name": [
-            "Project Kick-off",
-            "First progress meeting"
+            "First progress meeting",
+            "Project Kick-off"
           ],
           "description": [
-            "Meeting with the entire team and subject matter experts. The meeting covered work packages, procurement (research cruises and equipment), project management, deliverables, and communication.",
-            "Meeting with project members and experts. Discussions focused on work package updates, acquisition systems, sensors, research cruises, dissemination, and preliminary scientific results."
+            "Meeting with project members and experts. Discussions focused on work package updates, acquisition systems, sensors, research cruises, dissemination, and preliminary scientific results.",
+            "Meeting with the entire team and subject matter experts. The meeting covered work packages, procurement (research cruises and equipment), project management, deliverables, and communication."
           ],
           "date": [
-            "April 2, 2025",
-            "November 13, 2025"
+            "November 13, 2025",
+            "April 2, 2025"
           ]
         }
       }
