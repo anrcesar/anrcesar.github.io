@@ -1,0 +1,46 @@
+[
+  {
+    "section": "header",
+    "template": "<img src=\"{src}\" alt=\"{alt}\" class=\"img-thumbnail img-responsive d-block mx-auto\">",
+    "data": {
+      "src": "imgs/logo_cesar.png",
+      "alt": "Logo of the CESAR project"
+    }
+  },
+  {
+    "section": "footer",
+    "template": "<div class=\"row\">{logos}</div>",
+    "data": {
+      "logos": {
+        "template": "<div class=\"col-md-4\"><a href=\"{link}\"><img src=\"{src}\" alt=\"{alt}\" class=\"img-thumbnail img-responsive d-block mx-auto\"></a></div>",
+        "data": {
+          "src": [
+            "imgs/logo_anr.png",
+            "imgs/logo_pm.png",
+            "imgs/logo_ir.png"
+          ],
+          "alt": [
+            "Logo of the ANR",
+            "Logo of the Pôle Mer Bretagne Atlantique",
+            "Logo of Images et Réseaux"
+          ],
+          "link": [
+            "https://anr.fr",
+            "https://www.pole-mer-bretagne-atlantique.com",
+            "https://www.images-et-reseaux.com"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "section": "brief_description",
+    "template": "{text}<br><br><figure class=\"figure d-block mx-auto\"><img src=\"{src}\" alt=\"{alt}\" class=\"figure-img img-fluid rounded\"><figcaption class=\"figure-caption\">{caption}</figcaption></figure>",
+    "data": {
+      "text": "This project aims to improve understanding of underwater environments by fusing multimodal data to support robust decision-making on underwater drones. It focuses on enhancing semantic segmentation by integrating environmental data to overcome strong spatial and temporal variability in underwater imagery. The core hypothesis is that linking environmental parameters with image analysis can improve scene interpretation and drone autonomy. Advanced machine learning approaches such as contrastive learning, curriculum learning, adaptive transformers, and knowledge distillation are explored. Applications include real-time autonomous navigation, inspection, security, and monitoring, with efficient onboard AI on resource-constrained platforms (<a onclick=\"showSection('#project');\">Read more</a>).",
+      "src": "imgs/wp_diagram.png",
+      "alt": "Work Packages Diagram",
+      "caption": "Interaction between the work-packages of the CESAR project."
+    }
+  }
+]

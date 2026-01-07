@@ -3,7 +3,7 @@
  * \\Company: ISEN Ouest
  * \\Email: thibault.napoleon@isen-ouest.yncrea.fr
  * \\Created Date: 16-Oct-2024 - 12:33:51
- * \\Last Modified: 23-Dec-2025 - 15:54:04
+ * \\Last Modified: 05-Jan-2026 - 15:47:03
  */
 
 @media (min-width: 1400px) {
@@ -110,14 +110,15 @@ h3 {
   font-weight: 500;
 }
 
-a {
+a, a:not([href]):not([class]) {
   color: var(--color2);
   text-decoration: none;
 }
 
-a:hover {
+a:hover, a:hover:not([href]):not([class]) {
   color: var(--color1);
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .ai, .bi {

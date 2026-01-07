@@ -3,7 +3,7 @@
  * \\Company: ISEN Ouest
  * \\Email: thibault.napoleon@isen-ouest.yncrea.fr
  * \\Created Date: 16-Oct-2024 - 12:33:39
- * \\Last Modified: 23-Dec-2025 - 14:59:27
+ * \\Last Modified: 05-Jan-2026 - 15:08:58
  */
 
 'use strict';
@@ -15,6 +15,7 @@ const HAL_API_URL = 'https://api.archives-ouvertes.fr/search/' +
   'authFullName_s,title_s,citationRef_s,label_s,label_bibtex,seeAlso_s,' +
   'producedDateY_i&sort=producedDate_s desc&rows=1000';
 const DATA = [
+  {'file': 'json/home.json'},
   {'file': 'json/project.json'},
   {'file': 'json/team_experts.json'},
   {'file': 'json/publications_disseminations.json'},
@@ -39,7 +40,7 @@ setColorScheme();
 
 // Display project section.
 handleMenuClick();
-showSection('#project');
+showSection('#home');
 
 //------------------------------------------------------------------------------
 //--- loadData -----------------------------------------------------------------
