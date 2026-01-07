@@ -3,7 +3,7 @@
  * \\Company: ISEN Ouest
  * \\Email: thibault.napoleon@isen-ouest.yncrea.fr
  * \\Created Date: 16-Oct-2024 - 12:33:39
- * \\Last Modified: 05-Jan-2026 - 15:08:58
+ * \\Last Modified: 07-Jan-2026 - 11:47:58
  */
 
 'use strict';
@@ -11,9 +11,10 @@
 // Constants.
 const PROJECT = 'ANR-24-CE56-5502';
 const HAL_API_URL = 'https://api.archives-ouvertes.fr/search/' +
-  '?q=anrProjectReference_s:"' + PROJECT + '"&fl=halId_s,docid,docType_s,' +
-  'authFullName_s,title_s,citationRef_s,label_s,label_bibtex,seeAlso_s,' +
-  'producedDateY_i&sort=producedDate_s desc&rows=1000';
+  '?q=anrProjectReference_s:"' + PROJECT + '" OR collaboration_s:"' + PROJECT +
+  '"&fl=halId_s,docid,docType_s,authFullName_s,title_s,citationRef_s,' +
+  'label_s,label_bibtex,seeAlso_s,producedDateY_i&sort=producedDate_s ' +
+  'desc&rows=1000';
 const DATA = [
   {'file': 'json/home.json'},
   {'file': 'json/project.json'},

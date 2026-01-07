@@ -21,7 +21,7 @@
   },
   {
     "section": "conferences",
-    "template": "<h2>{title}</h2>Coming soon<ol reversed>{conferences}</ol>",
+    "template": "<h2>{title}</h2><ol reversed>{conferences}</ol>",
     "data": {
       "title": "Conferences",
       "conferences": {
